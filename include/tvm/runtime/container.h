@@ -2711,7 +2711,7 @@ class DenseMapNode : public MapNode {
     Block* block;
   };
 
- protected:
+protected:
   /*! \brief fib shift in Fibonacci Hashing */
   uint32_t fib_shift_;
   /*! \brief array of data blocks */
@@ -2745,6 +2745,8 @@ class DenseMapNode : public MapNode {
   /* clang-format on */
   friend class MapNode;
 };
+
+TVM_DLL constexpr uint64_t DenseMapNode::kNextProbeLocation[];
 
 #define TVM_DISPATCH_MAP(base, var, body)     \
   {                                           \
