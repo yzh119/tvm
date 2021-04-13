@@ -2746,8 +2746,6 @@ protected:
   friend class MapNode;
 };
 
-TVM_DLL constexpr uint64_t DenseMapNode::kNextProbeLocation[];
-
 #define TVM_DISPATCH_MAP(base, var, body)     \
   {                                           \
     using TSmall = SmallMapNode*;             \
